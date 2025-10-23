@@ -1,0 +1,629 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --pink-bg: #ffeaf3;
+  --pink-main: #ffd6e6;
+  --pink-deep: #ff9fc2;
+  --white: #ffffff;
+  --shadow: rgba(255, 143, 183, 0.35);
+}
+
+.container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: max-content;
+    margin-top: 2%;
+}
+
+.container_text{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}   
+
+.happy_birthday_text_header{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--pink-bg);
+    font-weight: bold;
+    color: var(--pink-deep);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container_content{
+    width: 100%;
+    height: max-content;
+    background-color: var(--pink-bg);
+    margin-top: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.image_header_text_only {
+    width: 100%;       /* atur lebar */
+    height: 100px;      /* atur tinggi */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pink-deep); /* nanti ini background */
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text_image_overlay {
+    text-align: left;    /* teks rata kiri */
+    margin-left: -10px;   /* bisa diubah sesuai kebutuhan */
+}
+
+.overlay_text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    color: var(--white);
+    font-weight: bold;
+    margin-bottom: 2px;  /* jarak bawah antar teks */
+}
+
+.overlay_text_description {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    color: var(--white);
+    line-height: 1.5;    /* jarak antar baris */
+}
+
+.container_button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    gap: 50px;
+    padding: 10px;
+}
+
+.button_styles {
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--pink-deep);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 10px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+    .button_styles:hover {
+    background-color: var(--pink-deep);
+    color: var(--white);
+  }
+
+.button_styles_collect {
+    /* --- Perbaikan Utama untuk Posisi --- */
+    display: block; /* Jadikan elemen block agar margin auto berfungsi */
+    width: max-content; /* Lebar tombol menyesuaikan isinya */
+    margin: 20px auto 15px auto; /* Atur margin (atas, kanan-kiri, bawah) */
+    
+    /* --- Gaya Asli Anda (sudah bagus) --- */
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 25px; /* Sedikit lebih lebar agar seimbang */
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--pink-deep);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 10px 10px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+/* Efek saat hover (tidak perlu diubah) */
+.button_styles_collect:hover {
+    background-color: var(--pink-deep);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 15px rgba(255, 143, 183, 0.45);
+}
+
+/* Saat tombol aktif (tidak perlu diubah) */
+.button_styles_collect.active {
+    background-color: var(--pink-deep); 
+    color: var(--white);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); 
+}
+
+.text_made_with_love{
+  font-family: 'Quicksand', sans-serif;
+    font-size: 0.9em;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.text_with_name{
+  font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.profile_section.hidden{
+    display: none;
+}
+
+.profile_section {
+    background-color: var(--pink-deep); 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile_title {
+  font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.profile_description {
+  font-family: 'Quicksand', sans-serif;
+    color: white;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  overflow-x: hidden;
+}
+
+.carousel-track img {
+  height: 300px; /* tinggi tetap */
+  width: 400; /* biar gak gepeng */
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* --- ReadMe / Amplop horizontal --- */
+.image_wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.readMe_view {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column; /* Ubah row -> column supaya gambar di atas teks */
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px; /* jarak antara gambar dan teks */
+    background-color: var(--pink-deep);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+}
+
+.readMe_image_container {
+    margin-top: 20px;
+    display: flex;
+    gap: 80px; /* jarak antar gambar */
+    justify-content: center; /* sejajar di tengah horizontal */
+    flex-wrap: wrap; /* agar responsive, gambar pindah baris jika layar sempit */
+}
+
+.readMe_image {
+    width: 180px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.readMe_image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 143, 183, 0.5);
+}
+
+.image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 143, 183, 0.5); /* pink transparan */
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 5px;
+}
+
+.image_wrapper:hover .image_overlay {
+    opacity: 1; /* muncul saat hover */
+}
+
+.readMe_text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+/* Tombol Read Me / COLLECT */
+.button_styles_readMe {
+    font-family: 'Quicksand', sans-serif;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--pink-deep);
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 15px var(--shadow);
+    transition: all 0.3s ease;
+    margin: 10px auto 0 auto; /* margin atas 10px, auto kiri kanan untuk center */
+    display: block; /* pastikan tombol bisa center */
+}
+
+.button_styles_readMe:hover {
+    background-color: var(--pink-main);
+    color: var(--pink-deep);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 15px rgba(255, 143, 183, 0.45);
+}
+
+.envelope_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.envelope_image,
+.postcard_image {
+  width: 280px;
+  max-width: 70%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.envelope_image:hover,
+.postcard_image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 143, 183, 0.5);
+}
+
+
+.hidden{
+    display: none;
+}
+
+@keyframes dropEffect {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.photostrip_reel.animate {
+    animation: printEffect 10s ease-out forwards;
+}
+
+.photostrip_reel img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 10px 10px 25px 10px; 
+    background-color: black;
+    box-sizing: border-box; 
+}
+
+/* ===== RESPONSIVE CLEAN & PROPORSIONAL ===== */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .container {
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .happy_birthday_text_header {
+        font-size: 1.3em;
+        padding: 6px 10px;
+    }
+
+    .container_content {
+        margin-top: 8px;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .overlay_text {
+        font-size: 1.1em;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .overlay_text_description {
+        font-size: 0.95em;
+        text-align: center;
+    }
+
+    .container_button {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .button_styles {
+        font-size: 0.85em;
+        padding: 6px 12px;
+    }
+
+    .profile_section {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .profile_title {
+        font-size: 15px;
+    }
+
+    .profile_description {
+        font-size: 12px;
+                margin: 10px;
+    }
+
+    .readMe_title {
+                font-size: 15px;
+    }
+
+    .readMe_description {
+                font-size: 12px;
+        margin: 10px;
+    }
+
+    .profile_image {
+        width: 120px;
+        max-width: 120px;
+        margin: 0 auto;
+    }
+
+    .readMe_view {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .readMe_image {
+        width: 120px;
+        max-width: 40%;
+    }
+
+    .envelope_image,
+    .postcard_image {
+        width: 200px;
+        max-width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .photostrip_viewer {
+        width: 60px;
+        height: 250px;
+        margin-bottom: -40px;
+    }
+
+    .button_styles_readMe {
+        margin-top: -10px;
+        font-size: 10px;
+    }
+}
+
+/* ===== SEMUA MASUK DARI BAWAH SERENTAK ===== */
+@keyframes slideUpFadeSmooth {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Terapkan ke semua elemen utama tanpa delay */
+.happy_birthday_text_header,
+.overlay_text,
+.overlay_text_description,
+.container_content,
+.button_styles {
+    animation: slideUpFadeSmooth 1.2s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+
+/* ✅ Responsive untuk Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 0 10px;
+  }
+
+  .happy_birthday_text_header {
+    width: 100%;
+    margin: 30px auto 10px auto;
+    font-size: 15px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .container_content {
+    width: 340px;
+    margin-top: -10px;
+    height: 900px;
+    border-radius: 10px;
+  }
+
+  .overlay_text {
+    font-size: 12px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .overlay_text_description {
+    font-size: 8px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .container_button {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin: 15px auto;
+  }
+
+  .button_styles {
+    font-size: 14px;
+    padding: 10px 40px;
+    width: 300px;
+  }
+
+    .button_styles:hover {
+    background-color: var(--pink-deep);
+    color: var(--white);
+  }
+
+  .profile_section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .profile_image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+    .readMe_view {
+    padding: 15px;
+    gap: 15px;
+  }
+
+ .readMe_image_container {
+    display: flex;
+    gap: 10px;
+    margin-left: 50px;
+    padding-bottom: 10px; /* sedikit jarak dari footer */
+  }
+
+  .readMe_image {
+    width: 70%; /* dua di satu baris */
+    max-width: 180px;
+    margin: 0 auto; /* biar tetap rata tengah */
+  }
+
+  .readMe_image:hover {
+    width: 70%; /* dua di satu baris */
+    max-width: 180px;
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(255, 143, 183, 0.6);
+  }
+
+  .readMe_title {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+
+  .button_styles_readMe {
+    font-size: 13px;
+    padding: 8px 20px;
+    margin-bottom: 20px;
+  }
+
+  .envelope_image,
+  .postcard_image {
+    width: 200px;
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .text_made_with_love,
+  .text_with_name {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  .photostrip_viewer {
+    width: 60px;
+    height: 220px;
+    margin: 0 auto -30px auto;
+  }
+
+  .photostrip_reel img {
+    padding: 4px 4px 10px 4px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

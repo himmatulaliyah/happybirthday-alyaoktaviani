@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Alya Oktaviani</title>
+
+  <!-- Font & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/page1.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <img src="assets/gif3.gif" alt="Cute Bunny" class="gif" />
+
+      <h1>
+        Hey, take a look! <br />
+        I’ve got a little something for you.
+      </h1>
+
+      <button class="btn" id="nextBtn">Click to see it!</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      window.location.href = "page2.html";
+    });
+  </script>
+</body>
+</html>

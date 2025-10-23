@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Alya Oktaviani</title>
+
+  <!-- Font & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/e582aba65f.js" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style/index.css" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="container_text">
+      <p class="happy_birthday_text_header">Happy Birthday Alya Oktaviani</p>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="container_content">
+      <div class="image_header_text_only">
+        <div class="text_image_overlay">
+          <p class="overlay_text">Happy 27th!</p>
+        <p class="overlay_text_description">
+  My love, you’re not just getting older — you’re leveling up in life. <br>
+May every step you take be filled with happiness, may all your dreams come true, and know that I’ll always be by your side, supporting and loving you.
+
+        </div>
+      </div>
+
+      <!-- Button Section -->
+      <div class="container_button">
+        <button id="profileButton" class="button_styles">
+          <i class="fa-solid fa-user"></i> About You
+        </button>
+        <button id="galleryButton" class="button_styles">
+          <i class="fa-solid fa-cake-candles"></i> Gallery
+        </button>
+        <button id="readMeButton" class="button_styles">
+          <i class="fa-solid fa-envelope"></i> Read Me
+        </button>
+      </div>
+
+      <!-- Profile Section -->
+      <div id="profileContent" class="profile_section hidden animate-profile">
+        <div class="profile_text_container">
+          <h3 class="profile_title">A Little About You</h3>
+          <p class="profile_description">
+            Hey my pretty girl, <br>
+Happy 27th! Wishing you a day as amazing as you are. <br>
+Even from afar, I hope you can feel all the love and positive vibes I’m sending your way.
+
+You’ve grown into such an incredible person — kind, strong, and full of warmth. I’m so proud of who you’ve become. I wish I could be there to celebrate with you, see your smile, and remind you how special you are in person.
+
+<br> <br> May this year bring you laughter, peace, and countless little moments that make your heart happy. May all your dreams start coming true, one by one.
+
+Keep shining, keep chasing your dreams, and never forget how amazing you are. Happy birthday again, my love — you’ll always be someone very special to me, no matter the distance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Gallery Section -->
+      <div id="galleryContent" class="carousel">
+  <div class="carousel-track">
+    <!-- Ganti src dengan path gambar kamu -->
+    <img src="assets/2.jpg" alt="photo2">
+    <img src="assets/3.jpg" alt="photo3">
+    <img src="assets/4.jpg" alt="photo4">
+    <img src="assets/5.jpg" alt="photo5">
+    <img src="assets/6.jpg" alt="photo6">
+    <img src="assets/7.jpg" alt="photo7">
+    <img src="assets/8.jpg" alt="photo8">
+    <img src="assets/9.jpg" alt="photo9">
+    <img src="assets/10.jpg" alt="photo10">
+    <img src="assets/11.jpg" alt="photo11">
+    <img src="assets/12.jpg" alt="photo12">
+    <img src="assets/13.jpg" alt="photo13">
+    <img src="assets/14.jpg" alt="photo14">
+    <img src="assets/15.jpg" alt="photo15">
+    <img src="assets/16.jpg" alt="photo16">
+    <img src="assets/17.jpg" alt="photo17">
+    <img src="assets/18.jpg" alt="photo18">
+    <img src="assets/19.jpg" alt="photo19">
+    <img src="assets/20.jpg" alt="photo20">
+    <img src="assets/21.jpg" alt="photo21">
+    <img src="assets/22.jpg" alt="photo22">
+    <img src="assets/23.jpg" alt="photo23">
+    <img src="assets/24.jpg" alt="photo24">
+    <img src="assets/25.jpg" alt="photo25">
+    <img src="assets/26.jpg" alt="photo26">
+    <img src="assets/27.jpg" alt="photo27">
+    <img src="assets/28.jpg" alt="photo27">
+  </div>
+</div>
+
+      <!---- Read Me Section -->
+      <div id="readMeContent" class="readMe_section hidden">
+        <!-- Initial View -->
+        <div id="readMeInitialView" class="readMe_view">
+   <div class="readMe_image_container">
+    <div class="image_wrapper">
+        <img src="assets/29.jpg" alt="read me image" class="readMe_image" />
+    </div>
+    <div class="image_wrapper">
+        <img src="assets/30.jpg" alt="read me image" class="readMe_image" />
+    </div>
+    <div class="image_wrapper">
+        <img src="assets/31.jpg" alt="read me image" class="readMe_image" />
+    </div>
+    <div class="image_wrapper">
+        <img src="assets/32.jpg" alt="read me image" class="readMe_image" />
+    </div>
+</div>
+
+    <div class="readMe_text_container">
+        <h3 class="readMe_title">Happy Birthday Baby!</h3>
+        <button id="readMeButtonMessage" class="button_styles_readMe">
+            <i class="fa-solid fa-envelope"></i> Read Me
+        </button>
+    </div>
+</div>
+
+        </div>
+
+        <!-- Envelope & Postcard Section -->
+<div class="readMe_section">
+  <!-- Envelope View -->
+  <div id="readMeEnvelopeView" class="readMe_view hidden">
+    <div class="envelope_container">
+      <img src="assets/surat1.png" alt="envelope" class="envelope_image" />
+    </div>
+  </div>
+
+  <!-- Postcard View -->
+  <div id="readMePostcardView" class="readMe_view hidden">
+    <img src="assets/surat2.png" alt="postcard" class="postcard_image" />
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+
+  <!-- Background Music -->
+  <audio id="bg-music" src="assets/lany.mp3" loop muted></audio>
+
+  <!-- JavaScript -->
+  <script src="scripts/index.js"></script>
+</body>
+</html>
+
+<script>
+// -----------------------------
+// SECTION MANAGEMENT
+// -----------------------------
+const profileButton = document.getElementById('profileButton');
+const galleryButton = document.getElementById('galleryButton');
+const readMeButton = document.getElementById('readMeButton');
+
+const profileContent = document.getElementById('profileContent');
+const galleryContent = document.getElementById('galleryContent');
+const readMeContent = document.getElementById('readMeContent');
+
+function resetAllSections() {
+  profileContent.classList.add('hidden');
+  galleryContent.classList.add('hidden');
+  readMeContent.classList.add('hidden');
+
+  profileButton.classList.remove('active');
+  galleryButton.classList.remove('active');
+  readMeButton.classList.remove('active');
+}
+
+document.addEventListener('DOMContentLoaded', resetAllSections);
+
+// -----------------------------
+// CAROUSEL
+// -----------------------------
+const track = document.querySelector('.carousel-track');
+let scrollPos = 0;
+const speed = 1.5;
+
+function startCarousel() {
+  if (!track) return;
+  const maxScroll = track.scrollWidth - track.clientWidth;
+  scrollPos += speed;
+  if (scrollPos >= maxScroll) scrollPos = 0;
+  track.scrollLeft = scrollPos;
+  requestAnimationFrame(startCarousel);
+}
+
+window.addEventListener('load', () => {
+  const maxScroll = track.scrollWidth - track.clientWidth;
+  scrollPos = Math.random() * maxScroll * 0.5;
+  startCarousel();
+});
+
+// -----------------------------
+// BUTTON INTERACTIONS
+// -----------------------------
+profileButton.addEventListener('click', () => {
+  const isActive = profileButton.classList.contains('active');
+  resetAllSections();
+  if (!isActive) {
+    profileButton.classList.add('active');
+    profileContent.classList.remove('hidden');
+  }
+});
+
+galleryButton.addEventListener('click', () => {
+  const isActive = galleryButton.classList.contains('active');
+  resetAllSections();
+  if (!isActive) {
+    galleryButton.classList.add('active');
+    galleryContent.classList.remove('hidden');
+  }
+});
+
+readMeButton.addEventListener('click', () => {
+  const isActive = readMeButton.classList.contains('active');
+  resetAllSections();
+  if (!isActive) {
+    readMeButton.classList.add('active');
+    readMeContent.classList.remove('hidden');
+  }
+});
+
+// -----------------------------
+// AUDIO BACKGROUND
+// -----------------------------
+const audio = document.getElementById('bg-music');
+function startMusic() {
+  audio.muted = false;
+  audio.play();
+  window.removeEventListener('click', startMusic);
+  window.removeEventListener('scroll', startMusic);
+}
+window.addEventListener('click', startMusic, { once: true });
+window.addEventListener('scroll', startMusic, { once: true });
+
+// -----------------------------
+// READ ME INTERACTIONS
+// -----------------------------
+const readMeButtonMessage = document.getElementById('readMeButtonMessage');
+const readMeInitialView = document.getElementById('readMeInitialView');
+const readMeEnvelopeView = document.getElementById('readMeEnvelopeView');
+const readMePostcardView = document.getElementById('readMePostcardView');
+const envelopeImage = readMeEnvelopeView.querySelector('.envelope_image');
+
+// 1️⃣ klik tombol "Read Me" (di bawah gambar)
+readMeButtonMessage.addEventListener('click', () => {
+  readMeInitialView.classList.add('hidden');
+  readMeEnvelopeView.classList.remove('hidden');
+});
+
+// 2️⃣ klik amplop → tampilkan isi surat
+envelopeImage.addEventListener('click', () => {
+  readMeEnvelopeView.classList.add('hidden');
+  readMePostcardView.classList.remove('hidden');
+});
+</script>
